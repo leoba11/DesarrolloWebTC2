@@ -1,0 +1,356 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+  background-color: #9cf386;
+}
+.box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  .list{
+    padding: 5%;
+    grid-column: 2;
+
+    li{
+      font-size: 130%;
+    }
+  }
+
+  .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+}
+
+.card:before,
+.card:after
+{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.5s;
+  z-index:-1;
+}
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+  
+.card .imgBx img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Hacer que la imagen quede bien
+}
+  
+.card{ 
+  .details{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 15px;
+    text-align: center;
+  }
+}
+  
+.card{
+  .details{
+    h2{
+    font-size: 22px;
+    color: #777;
+    }
+  }
+} 
+  
+.card{
+  .details {
+    h2 span{
+      font-size: 16px;
+      color: #9cf386;
+    }
+  }
+} 
+
+.wrapper {
+  background-image: url('../assets/architecture-background-brick-194096.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content{
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  
+    h1{
+      font-family: 'Century Gothic', sans-serif;
+      color: #f9f3f4;
+      font-size: 500%;
+      text-shadow: 0 0 300px #000;
+    }
+  
+    .btn{
+      font-family: 'Century Gothic', sans-serif;
+      font-size: 150%;
+      border-radius: 9px;
+      color:  #f9f3f4;
+      text-decoration: none;
+      border: 3px solid;
+      padding: 7px 13px;
+      font-weight: bold;
+      
+      &:hover{
+        color: #319b66;
+      }
+    }
+  }
+}
+
+.wrapperGoals{
+  h1{
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    color: #080002;
+    font-size: 300%;
+    text-align: center;
+    margin: 35px;
+  }
+  .imgGoals{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+
+    .img0{
+      height: 245px;
+      width: 390px;
+      margin: 15px;
+      grid-column: 1;
+    }
+    .img1{
+      height: 245px;
+      width: 390px;
+      margin: 15px;
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .img2{
+      height: 245px;
+      width: 390px;
+      margin: 15px;
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .pa1{
+      grid-column: 2;
+      justify-self: start;
+      align-self: center;
+      font-size: 150%;
+    }
+    .pa2{
+      grid-column: 2;
+      justify-self: start;
+      align-self: center;
+      font-size: 150%;
+    }
+    .pa3{
+      grid-column: 2;
+      justify-self: start;
+      align-self: center;
+      font-size: 150%;
+    }
+  }
+
+  
+}
+
+.wrapperAbout{
+  
+  h1{
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    color: #080002;
+    font-size: 300%;
+    text-align: center;
+    margin: 35px;
+  }
+}
+
+.wrapperContact {
+
+  .content {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+      font-family: 'Century Gothic', sans-serif;
+      font-weight: bold;
+      color: #000000;
+      font-size: 350%;
+      text-shadow: 0 0 300px #000;
+    }
+
+    p {
+      font-family: 'Century Gothic', sans-serif;
+      color: #000000;
+      font-size: 110%;
+    }
+    
+  } 
+
+  .imgCnt{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    .a1{
+      grid-column: 2;
+      justify-self: center;
+      .img{
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .a2{
+      grid-column: 3;
+      justify-self: center;
+      .img1{
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .a3{
+      grid-column: 4;
+      justify-self: center;
+      .img2{
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}
+
+.wrapperHob{
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:  repeat(3, 1fr);
+
+  .img0{
+    width: 400px;
+    height: 350px;;
+    grid-column: 1;
+    justify-self: center;
+    margin: 30px;
+  }
+  .img1{
+    width: 400px;
+    height: 350px;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    margin: 30px;
+  }
+  .img2{
+    width: 400px;
+    height: 350px;;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    margin: 30px;
+  }
+  .gym{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+  .docum{
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+  .friends{
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+.why{
+  margin: 6%;
+  padding: 3%;
+  border-style: solid;
+  border-width: 1px; 
+  border-radius: 15px;
+  h4{
+    font-weight: bold;
+  }
+}
+
+.curso{
+  margin: 6%;
+  padding: 3%;
+  border-style: solid;
+  border-width: 1px; 
+  border-radius: 15px;
+  h4{
+    font-weight: bold;
+  }
+}
+
+.compas{
+  margin: 6%;
+  padding: 3%;
+  border-style: solid;
+  border-width: 1px; 
+  border-radius: 15px;
+  h4{
+    font-weight: bold;
+  }
+  .im{
+    width: 300px;
+    height: 220px;
+  }
+}
+
+.but{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .btS{
+    grid-column: 2;
+  }
+}
